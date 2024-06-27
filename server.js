@@ -16,7 +16,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.route('/').get((req, res) => {
-  res.render('index');
+  res.render('index', {
+    title: 'Hello',
+    message: 'Please login'
+  });
 });
 
 
